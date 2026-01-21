@@ -9,7 +9,6 @@ const routes = [
   { path: "/live", component: LiveEarth }
 ];
 
-const router = VueRouter.createRouter({
-  history: VueRouter.createWebHashHistory(),
+const router = new VueRouter({
   routes
 });
