@@ -1,3 +1,5 @@
-const app = Vue.createApp({});
-app.use(router);
-app.mount("#app");
+new Vue({
+  el: "#app",
+  router,
+  template: `<router-view></router-view>`
+});
