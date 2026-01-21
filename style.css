@@ -1,0 +1,165 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: radial-gradient(circle at top, #0b1b3b, #000814);
+  color: #e0f2ff;
+  overflow-x: hidden;
+}
+
+/* Stjärntextur */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.25;
+  pointer-events: none;
+  animation: drift 60s linear infinite;
+}
+
+@keyframes drift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-1000px); }
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #111827, #1f2937);
+  padding: 20px;
+  color: #e5e7eb;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #020617;
+  padding: 12px;
+  border-bottom: 2px solid #1d4ed8;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e5e7eb;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 15px;
+  transition: 0.2s;
+  border: 1px solid #1d4ed8;
+}
+
+nav a:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* Container */
+.container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Cards */
+.card {
+  background: rgba(15,23,42,0.95);
+  padding: 18px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  border: 1px solid #1d4ed8;
+}
+
+/* APOD image */
+.apod-image {
+  max-width: 100%;
+  border-radius: 16px;
+  margin: 10px 0 15px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+}
+
+/* Video frame */
+.video-frame {
+  width: 100%;
+  height: 400px;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+  margin: 10px 0 15px 0;
+}
+
+/* Loader */
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #1d4ed8;
+  border-top-color: transparent;
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Error box */
+.error {
+  color: #fecaca;
+  background: #7f1d1d;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Divider */
+.divider {
+  margin: 25px 0;
+  border-color: #1d4ed8;
+  opacity: 0.4;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  color: white;
+}
+
+.button.blue {
+  background: #1d4ed8;
+}
+
+.button.cyan {
+  background: #0ea5e9;
+}
+
+/* Datumförslag */
+.date-suggestions li {
+  cursor: pointer;
+  padding: 6px 0;
+  transition: 0.2s;
+}
+
+.date-suggestions li:hover {
+  color: #38bdf8;
+  transform: translateX(4px);
+}
